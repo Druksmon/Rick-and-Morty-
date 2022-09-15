@@ -1,3 +1,17 @@
-.App{
-  background-color: rebeccapurple;
-}
+
+//UI SETTINGS
+
+@import './base/settings';
+
+//COMPONENTS
+
+
+@import './components/header';
+@import './components/form';
+@import './components/cards';
+@import './components/card';
+
+
+//SCREENS
+
+@import './screens/home';

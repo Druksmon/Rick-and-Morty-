@@ -1,0 +1,55 @@
+
+
+.header_container{
+  width: 100%;
+  height: 60vh;
+  background-image: url("../../assets/Header.jpg");
+  background-size: cover;
+  background-position: bottom;
+  display: grid;
+  place-content: center;
+
+
+  img{
+    width: 600px;
+  }
+}
+
+
+
+/*RESPONSIVE */
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (max-width: 1200px) {
+
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 992px) {
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+  .header_container{
+
+
+
+    img{
+      width: 400px;
+    }
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 450px) {
+  .header_container{
+
+
+
+    img{
+      width: 300px;
+    }
+  }
+}
+
