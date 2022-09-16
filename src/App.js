@@ -1,10 +1,11 @@
 import './styles/styles.scss';
 import Home from "./components/screens/Home";
 
+
 function App() {
-  return (
-    <Home/>
-  );
+    return (
+        <Home/>
+    );
 }
 
 export default App;

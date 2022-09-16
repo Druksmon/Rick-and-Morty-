@@ -1,6 +1,7 @@
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faSearch} from '@fortawesome/free-solid-svg-icons'
 import {useRef, useState} from "react";
+import {motion} from "framer-motion"
 
 const Form = ({addSearch}) => {
 
@@ -22,24 +23,23 @@ const Form = ({addSearch}) => {
 
     return (
 
-        <div className="form_container">
+        <motion.div initial={{ opacity: 0, y:50 }}
+                    animate={{ opacity: 1,y:0  }}
+                    transition={{ duration: 0.5 }} className="form_container">
             <div className="form_selector">
-                <h1>Characters</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa laudantium perferendis sapiente
-                    velit?
-                    Aliquid beatae dolores esse, et excepturi fugiat, incidunt ipsam maiores modi nulla quas quo sed,
-                    velit
-                    voluptates?</p>
+                <h1 >Characters</h1>
+                <p>Find all the Rick and Morty characters, along with information such as status, location and origin.</p>
                 <div className="form_input-box">
                     <form onSubmit={handleSubmit}>
-                        <input ref={inputRef} placeholder='Search' type="text" onChange={(e) => setSearch(e.target.value)}/>
+                        <input ref={inputRef} placeholder='Search' type="text"
+                               onChange={(e) => setSearch(e.target.value)}/>
                         <button><FontAwesomeIcon icon={faSearch} size="xl"/></button>
                     </form>
 
                 </div>
             </div>
 
-        </div>
+        </motion.div>
 
 
     )

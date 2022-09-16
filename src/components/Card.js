@@ -1,7 +1,7 @@
 import {useState} from "react";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faClose, faPlus} from '@fortawesome/free-solid-svg-icons'
-
+import {motion} from "framer-motion"
 
 const Card = ({principalCharacters}) => {
 
@@ -12,14 +12,17 @@ const Card = ({principalCharacters}) => {
 
     return (
 
-        <div className="card_container">
+        <motion.div initial={{opacity: 0, y: 50}}
+                    whileInView={{opacity: 1, y: 0}}
+                    viewport={{once: true}}
+                    transition={{duration: 0.8}} className="card_container">
             <img src={image} alt=""/>
-            <div className="card_text">
+            <div onClick={() => setIsModalOpen(!isModalOpen)} className="card_text">
                 {
                     isModalOpen === false && (
                         <div>
                             <h4>{name}</h4>
-                            <button onClick={() => setIsModalOpen(!isModalOpen)}><FontAwesomeIcon icon={faPlus} />
+                            <button ><FontAwesomeIcon icon={faPlus} />
                             </button>
                         </div>
                     )
@@ -27,7 +30,7 @@ const Card = ({principalCharacters}) => {
             </div>
             {
                 isModalOpen && (
-                    <div className="card_modal-text">
+                    <div onClick={() => setIsModalOpen(!isModalOpen)} className="card_modal-text">
                         <div className="card_modal-selector">
                             <div className="card_modal-header">
                                 <h4>{name}</h4>
@@ -49,7 +52,7 @@ const Card = ({principalCharacters}) => {
                     </div>
                 )
             }
-        </div>
+        </motion.div>
     )
 }
 
