@@ -17,7 +17,7 @@ const Cards = ({allCharacters, principalCharacters, search, nextPage, prevPage})
                         <div className="cards_box">
                             {
                                 principalCharacters?.map((characters) => {
-                                    return (<Card principalCharacters={{characters}} key={characters.id}/>)
+                                    return (<Card Characters={{characters}} key={characters.id}/>)
                                 })
                             }
                         </div>
@@ -32,7 +32,7 @@ const Cards = ({allCharacters, principalCharacters, search, nextPage, prevPage})
                         <div className="cards_box card_box-size ">
                             {
                                 allCharacters?.results?.map((characters) => {
-                                    return (<Card principalCharacters={{characters}} key={characters.id}/>)
+                                    return (<Card Characters={{characters}} key={characters.id}/>)
                                 })
                             }
                         </div>
@@ -42,7 +42,7 @@ const Cards = ({allCharacters, principalCharacters, search, nextPage, prevPage})
 
                     {
                         search?.results?.map((characters) => {
-                            return (<Card principalCharacters={{characters}} key={characters.id}/>)
+                            return (<Card Characters={{characters}} key={characters.id}/>)
                         })
                     }
                 </div>

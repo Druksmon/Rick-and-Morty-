@@ -3,10 +3,10 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faClose, faPlus} from '@fortawesome/free-solid-svg-icons'
 import {motion} from "framer-motion"
 
-const Card = ({principalCharacters}) => {
+const Card = ({Characters}) => {
 
 
-    const {name, status, species, location, origin, image} = principalCharacters.characters;
+    const {name, status, species, location, origin, image} = Characters.characters;
 
     const [isModalOpen, setIsModalOpen] = useState(false)
 

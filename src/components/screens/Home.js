@@ -19,7 +19,7 @@ const Home = () => {
         fetch('https://rickandmortyapi.com/api/character/1,2,3,4,5')
             .then((data) => data.json())
             .then((res) => setPrincipalCharacters(res))
-        fetch('https://rickandmortyapi.com/api/character/?page=2')
+        fetch('https://rickandmortyapi.com/api/character?page=9')
             .then((data) => data.json())
             .then((res) => setAllCharacters(res))
 
@@ -27,7 +27,7 @@ const Home = () => {
     }, []);
 
     const addSearch = (text) => {
-        fetch(`https://rickandmortyapi.com/api/character/?name=${text}`)
+        fetch(`https://rickandmortyapi.com/api/character?name=${text}`)
             .then((data) => data.json())
             .then((res) => setSearch(res))
     }
